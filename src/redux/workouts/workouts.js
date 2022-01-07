@@ -9,7 +9,7 @@ export const storeData = (payload) => (
 );
 
 const reducer = (state = intialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case STORE_DATA:
       return action.payload;
     default:
@@ -18,4 +18,3 @@ const reducer = (state = intialState, action) => {
 };
 
 export default reducer;
-

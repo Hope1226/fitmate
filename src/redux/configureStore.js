@@ -1,7 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
-import workoutReducer from "./workouts/workouts";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+import workoutReducer from './workouts/workouts';
 
 const reducer = combineReducers({
   workoutReducer,
