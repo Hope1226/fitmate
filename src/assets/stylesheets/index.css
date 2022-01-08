@@ -1,3 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --main: hsl(200, 34%, 32%);
+  --fird: #41c1ba;
+  --second: #f7f7f7;
+};
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  color: var(--main);
+}
+
+body {
+  background: var(--second);
+}
+
+.main-header {
+  display: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background: var(--main);
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 50px;
+}
+
+.main-nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--main);
+}
+
+.nav-link {
+  width: 50px;
+}
