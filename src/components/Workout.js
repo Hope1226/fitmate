@@ -11,7 +11,7 @@ function Workout({ list }) {
       {list.map((workout) => (
         <div key={uniqid()} className="workout">
           <h1>{workout.name}</h1>
-          <img src={require(`../assets/images/workouts/chest/chest-${workout.id}.png`)} alt="exercise" />
+          <img src={require(`../assets/images/workouts/${workout.category}/${workout.category}-${workout.id}.png`)} alt="exercise" />
         </div>
       ))}
     </div>
