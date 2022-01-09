@@ -1,6 +1,6 @@
 :root {
   --main: hsl(200, 34%, 32%);
-  --fird: #41c1ba;
+  --first: #41c1ba;
   --second: #f7f7f7;
 };
 
@@ -51,10 +51,13 @@ body {
   left: 0;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   background: var(--main);
 }
 
-.nav-link {
-  width: 50px;
+.navLink {
+  padding: 10px;
+}
+
+.active svg {
+ fill: var(--first);
 }
