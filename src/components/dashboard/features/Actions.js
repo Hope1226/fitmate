@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Actions = () => (
-  <div>
-    <h2>Actions</h2>
+  <div className="dash-children actions">
+    <h2 className="main-headings">Actions</h2>
   </div>
 );
 

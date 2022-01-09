@@ -6,7 +6,7 @@
   --second: #f7f7f7;
   --main-font: 'Barlow', sans-serif;
   --box-shadow: 0 0 5px 0 hsla(200, 34%, 32%, 0.418);
-};
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -48,7 +48,6 @@ body,
 
 .main-header {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 70px;
   background: var(--main);
@@ -86,14 +85,14 @@ body,
 }
 
 .active svg {
- fill: var(--first);
+  fill: var(--first);
 }
 
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "stats stats"
     "actions celandar";
   grid-gap: 10px;
@@ -133,10 +132,9 @@ body,
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "main main";
+  grid-template-areas: "main main";
   overflow: hidden;
-  border: 1px solid var(--second);
+  border: 1px solid var(--first);
 }
 
 .half-circle,
@@ -148,28 +146,12 @@ body,
 }
 
 .half-circle {
-  background: white;
+  background: var(--first);
 }
 
 .half-circle-top {
   background: white;
-}
-
-.prog-chart:hover .half-circle:nth-child(1) {
-  transform: rotate(180deg);
-  background: var(--first);
-  transition: all 1s linear;
-}
-
-.prog-chart:hover .half-circle:nth-child(2) {
-  transform: rotate(360deg);
-  background: var(--first);
-  transition: all 2s linear;
-}
-
-.prog-chart:hover .half-circle-top {
-  opacity: 0;
-  transition: opacity 0s 1s;
+  z-index: 2;
 }
 
 .prog-circle {
@@ -181,4 +163,15 @@ body,
   z-index: 10;
   grid-area: main;
   justify-self: center;
+}
+
+.dash-children {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  grid-gap: 20px;
 }
