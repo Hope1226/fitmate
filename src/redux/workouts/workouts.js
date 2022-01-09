@@ -1,12 +1,7 @@
-const STORE_DATA = 'workoutSrore/workouts/STORE_DATA';
-const intialState = [];
+import data from '../../assets/data/data';
 
-export const storeData = (payload) => (
-  {
-    type: STORE_DATA,
-    payload,
-  }
-);
+const STORE_DATA = 'workoutSrore/workouts/STORE_DATA';
+const intialState = data;
 
 const reducer = (state = intialState, action) => {
   switch (action.type) {
