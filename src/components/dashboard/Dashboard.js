@@ -1,8 +1,9 @@
 import React from 'react';
+import Stats from './features/Stats';
 
 const Dashboard = () => (
-  <div>
-    <h1>Dashboard</h1>
+  <div className="dashboard">
+    <Stats />
   </div>
 );
 
