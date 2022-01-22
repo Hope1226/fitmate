@@ -246,4 +246,5 @@ abbr[title="Saturday"] {
   padding: 10px;
   font-weight: 500;
   border-radius: 5px;
+  text-transform: uppercase;
 }
