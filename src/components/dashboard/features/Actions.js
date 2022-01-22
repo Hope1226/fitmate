@@ -9,6 +9,19 @@ const Actions = () => {
   const today = weekDays[date.getDay() - 1];
   const condtion = workOutDays.includes(today);
 
+  const setBtnTitle = () => {
+    switch (today) {
+      case 'Monday':
+        return 'Hit the chest and biceps';
+      case 'Wednesday':
+        return 'Hit the back and tricaps';
+      case 'Friday':
+        return 'Hit the legs and shoulders';
+      default:
+        return 'Discover the rest day';
+    }
+  };
+
   useEffect(() => {
     console.log(workOutDays);
   }, []);
@@ -24,6 +37,7 @@ const Actions = () => {
       <div className="todays-actions">
         <p>{condtion ? 'GYM DAY' : 'REST DAY'}</p>
         <img className="actions-img" src={condtion ? workoutAction : restAction} alt="" />
+        <button type="button" className="start-actions-btn">{setBtnTitle()}</button>
       </div>
     </div>
   );
