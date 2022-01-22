@@ -178,7 +178,6 @@ body,
 
 .actions-img {
   width: 100%;
-  padding: 10px 0;
 }
 
 .react-calendar {
@@ -231,4 +230,20 @@ abbr[title="Saturday"] {
 
 .react-calendar__tile--active abbr {
   color: var(--second);
+}
+
+.todays-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+}
+
+.start-actions-btn {
+  background: var(--first);
+  color: var(--second);
+  border: none;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 5px;
 }
