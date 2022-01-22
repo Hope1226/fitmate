@@ -168,12 +168,17 @@ body,
 .dash-children {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   background: white;
   border-radius: 12px;
   box-shadow: var(--box-shadow);
   padding: 10px;
-  grid-gap: 20px;
+  grid-gap: 10px;
+}
+
+.actions-img {
+  width: 100%;
+  padding: 10px 0;
 }
 
 .react-calendar {
