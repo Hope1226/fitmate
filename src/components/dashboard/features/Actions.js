@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import workoutAction from '../../../assets/images/actions/workout_day.svg';
 import restAction from '../../../assets/images/actions/rest_day.svg';
 
@@ -21,10 +21,6 @@ const Actions = () => {
         return 'Discover the rest day';
     }
   };
-
-  useEffect(() => {
-    console.log(workOutDays);
-  }, []);
 
   return (
     <div className="dash-children actions">
