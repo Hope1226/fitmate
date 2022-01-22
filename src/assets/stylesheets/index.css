@@ -175,3 +175,56 @@ body,
   padding: 10px;
   grid-gap: 20px;
 }
+
+.react-calendar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 5px;
+  padding: 10px 0;
+}
+
+.react-calendar__navigation {
+  display: flex;
+}
+
+.react-calendar__navigation > *,
+span {
+  background: none;
+  border: none;
+  padding: 2px;
+  font-family: var(--main-font);
+  text-transform:  uppercase;
+}
+
+.react-calendar__month-view__weekdays abbr {
+  color: var(--main);
+}
+
+.react-calendar__month-view__weekdays abbr[title = "Sunday"],
+abbr[title = "Saturday"] {
+  color: tomato;
+}
+
+.react-calendar__month-view__days__day {
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.react-calendar__month-view__days__day--weekend abbr {
+  color: var(--first);
+}
+
+.react-calendar__month-view__days__day--neighboringMonth abbr {
+  color: #cfcfcf;
+}
+
+.react-calendar__tile--active {
+  background: var(--main);
+}
+
+.react-calendar__tile--active abbr {
+  color: var(--second);
+}
+
