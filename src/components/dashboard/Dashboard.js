@@ -24,7 +24,7 @@ const Dashboard = () => {
   const [overLayOpen, setOverlayOpen] = useState(false);
   const openWrokoutOverlay = () => setOverlayOpen(true);
   const clsoeWorkoutOverlay = () => setOverlayOpen(false);
-  const completed = 0;
+  const completed = condtion ? 0 : 1;
   const allWrks = localStorage.length;
 
   const setBtnTitle = () => {
