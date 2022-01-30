@@ -53,6 +53,12 @@ const data = [
     name: 'Machine-Fly',
     description: 'The barbell bench press requires the person working out to lie flat on a bench which allows for improved muscle stability and the ability to lift a heavy amount of weight. Which will lead to greater muscle development.',
   },
+  {
+    id: 9,
+    category: 'rest',
+    name: 'rest-day',
+    description: 'Today is your well-deserved rest day! rest is just as important as gym days. So make sure you have a nice recovery, more protein, clean carbohydrates, healthy fats and good sleep, they are gonna speed up the recovery process. Make sure you have them on your to-do list for today. If you are a pro and would like to work out anyways, press a list of exercises and choose the muscle group which you would like to hit. Cheers Champ!',
+  },
 ];
 
 export default data;
