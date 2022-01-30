@@ -251,3 +251,19 @@ abbr[title="Saturday"] {
   border: none;
   border-radius: 5px;
 }
+
+.main-overlay {
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--second);
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.overlay-open {
+  top: 0;
+}
