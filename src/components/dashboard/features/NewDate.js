@@ -1,11 +1,11 @@
 import React from 'react';
 import CalendarSec from './Calendar';
 
-const Date = () => (
+const NewDate = () => (
   <div className="dash-children calendar">
     <h2 className="main-headings">Calendar</h2>
     <CalendarSec />
   </div>
 );
 
-export default Date;
+export default NewDate;
