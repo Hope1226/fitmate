@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-param-reassign */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { populateStore } from '../../redux/workouts/workouts';
@@ -21,6 +24,8 @@ const Dashboard = () => {
   const [overLayOpen, setOverlayOpen] = useState(false);
   const openWrokoutOverlay = () => setOverlayOpen(true);
   const clsoeWorkoutOverlay = () => setOverlayOpen(false);
+  const completed = 0;
+  const allWrks = localStorage.length;
 
   const setBtnTitle = () => {
     switch (today) {
@@ -33,6 +38,20 @@ const Dashboard = () => {
       default:
         return 'Discover the rest day';
     }
+  };
+
+  const calculatePercantage = () => {
+    const halfCircles = document.querySelectorAll('.half-circle');
+    const halfCirclesTop = document.querySelector('.half-circle-top');
+    const taskComplationDegrees = (360 * completed) / allWrks;
+
+    halfCircles.forEach((el) => {
+      el.style.transform = `rotate(${taskComplationDegrees}deg)`;
+      if (taskComplationDegrees >= 180) {
+        halfCircles[0].style.transform = 'rotate(180deg)';
+        halfCirclesTop.style.opacity = '0';
+      }
+    });
   };
 
   const setActivity = () => {
@@ -54,11 +73,16 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(populateStore());
     setActivity();
+    calculatePercantage();
   }, []);
 
   return (
     <div className="dashboard">
-      <Stats />
+      <Stats
+        conpleted={completed}
+        allWorkouts={allWrks}
+        persantage={Math.round((completed * 100) / allWrks)}
+      />
       <Actions
         currentDay={today}
         currentCondition={condtion}
@@ -74,7 +98,7 @@ const Dashboard = () => {
         condition={condtion}
         imgSrc={condtion ? workOutDays : restOverlay}
         activityName={setBtnTitle()}
-        actDesc={localStorage[0].description}
+        actDesc={condtion ? 'Gym day' : localStorage[0].description}
       />
     </div>
   );

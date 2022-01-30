@@ -8,7 +8,7 @@ const Overlay = ({
   toggleClass, closeOverlayFunc, condition, imgSrc, actDesc, activityName,
 }) => (
   <div className={`main-overlay ${toggleClass}`}>
-    <h1>{activityName}</h1>
+    <h2 className="main-headings">{activityName}</h2>
     <div className="action-description">
       <img src={imgSrc} alt="activity" />
       <div className="activity-description">
@@ -19,7 +19,7 @@ const Overlay = ({
       <button type="button" className="btns" onClick={closeOverlayFunc}>Stop the session</button>
       {condition
         ? <button type="button" className="btns">Next Exercies</button>
-        : <NavLink to="/workouts"><button type="button" className="btns">See the list of workouts</button></NavLink>}
+        : <NavLink to="/workouts" className="btns">See the list of workouts</NavLink>}
     </div>
   </div>
 );

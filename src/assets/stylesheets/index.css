@@ -262,6 +262,50 @@ abbr[title="Saturday"] {
   background: var(--second);
   z-index: 999;
   transition: all 0.3s;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.main-overlay > * {
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+}
+
+.main-overlay h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-description {
+  display:  grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+}
+
+.action-description p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.activitiy-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.activitiy-actions > * {
+  flex: 1;
+}
+
+.main-overlay img {
+  width: 100%;
 }
 
 .overlay-open {
