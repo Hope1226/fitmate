@@ -33,7 +33,7 @@ const Actions = () => {
       <div className="todays-actions">
         <p>{condtion ? 'GYM DAY' : 'REST DAY'}</p>
         <img className="actions-img" src={condtion ? workoutAction : restAction} alt="" />
-        <button type="button" className="start-actions-btn">{setBtnTitle()}</button>
+        <button type="button" className="btns start-actions-btn">{setBtnTitle()}</button>
       </div>
     </div>
   );
