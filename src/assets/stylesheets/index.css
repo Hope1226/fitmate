@@ -311,3 +311,56 @@ abbr[title="Saturday"] {
 .overlay-open {
   top: 0;
 }
+
+.workouts-container {
+  padding: 10px 10px 70px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 10px;
+  background: var(--second);
+}
+
+.workout-categories {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas: 
+    "image title"
+    "workouts workouts"
+    "btn btn";
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  grid-gap: 5px;
+}
+
+.workout-list {
+  height: 0;
+  overflow: hidden;
+  grid-area: workouts;
+}
+
+.see-more-btns {
+  grid-area: btn;
+  border: none;
+  background: transparent;
+}
+
+.img-container {
+  grid-area: image;
+  padding: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.workout-title {
+  grid-area: title;
+}
+
+.listOpen {
+  height: auto;
+}
