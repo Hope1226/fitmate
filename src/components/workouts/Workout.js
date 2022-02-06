@@ -10,8 +10,11 @@ function Workout({ list }) {
     <div className="workouts">
       {list.map((workout) => (
         <div key={uniqid()} className="workout">
-          <h1>{workout.name}</h1>
-          <img src={require(`../../assets/images/workouts/${workout.category}/${workout.category}-${workout.id}.png`)} alt="exercise" />
+          <h2 className="main-headings">{workout.name}</h2>
+          <div className="workout-img-container">
+            <img src={require(`../../assets/images/workouts/${workout.category}/${workout.category}-${workout.id}.png`)} alt="exercise" />
+          </div>
+          <button type="button" className="btns workout-btns">Start this exercise</button>
         </div>
       ))}
     </div>
