@@ -390,3 +390,38 @@ abbr[title="Saturday"] {
 .workout-img-container img {
   width: 100%;
 }
+
+.workout-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--second);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr auto auto;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.workout-overlay > * {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+}
+
+.wrokout-overlay-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrokout-overlay-img-container img {
+  width: 100%;
+}
+
+.wo-overlay-btns {
+  background: var(--first);
+}
