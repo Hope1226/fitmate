@@ -12,7 +12,6 @@ function Workout({ list }) {
 
   const findWorkout = (id) => {
     setTargetWorkout(list.filter((el) => el.id === id)[0]);
-    console.log(targetWorkout);
     setOverlay(true);
   };
 
@@ -20,7 +19,10 @@ function Workout({ list }) {
     setOverlay(false);
   };
 
-  const nextWorkout = () => console.log('under constructions');
+  const nextWorkout = (id) => {
+    const newId = id + 1;
+    setTargetWorkout(list.filter((el) => el.id === newId)[0]);
+  };
 
   return (
     <div className="workouts">

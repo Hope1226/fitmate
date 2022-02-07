@@ -18,7 +18,7 @@ const WorkoutOverlay = ({
       <p>{obj.description}</p>
     </div>
     <button type="button" className="btns wo-overlay-btns" onClick={closeFunc}>Stop this session</button>
-    <button type="button" className="btns wo-overlay-btns" onClick={next}>Next</button>
+    <button type="button" className="btns wo-overlay-btns" onClick={() => next(obj.id)}>Next</button>
   </div>
 );
 
